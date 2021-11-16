@@ -1,4 +1,13 @@
-<p>Title:<%= @book.title %></p>
-<p>Body:<%= @book.body %></p>
-<%= link_to "Edit",edit_book_path(@book.id) %>
-<%= link_to "Back",books_path %>
+<% if flash[:notice] %>
+  <div class="alert">
+    <%= notice %>
+  </div>
+<% end %>
+
+<div class="show">
+  <p class="show-text"><span>Title:</span> <%= @book.title %></p>
+  <p class="show-text"><span>Body:</span> <%= @book.body %></p>
+  <%= link_to "Edit",edit_book_path(@book.id) %>
+  |
+  <%= link_to "Back",books_path %>
+</div>

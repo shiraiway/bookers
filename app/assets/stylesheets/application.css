@@ -18,7 +18,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #333;
 }
+
+/*共通クラス*/
+/*---------------------------*/
 
 html {
   margin: 33px
@@ -35,7 +39,22 @@ h4 {
   font-weight: normal;
 }
 
-/*Topクラス*/
+a {
+  color: black;
+}
+
+a:hover {
+  color: white;
+  background-color: black;
+}
+
+.alert {
+  color: green;
+  margin-left: 33px;
+  margin-bottom: 33px;
+}
+
+/*Topページクラス*/
 /*------------------------------------*/
 
 .t-title {
@@ -78,14 +97,7 @@ td {
   vertical-align: inherit;
 }
 
-td a {
-  color: black;
-}
-
-td a:hover {
-  color: white;
-  background-color: black;
-}
+/*----New Book-------*/
 
 .field {
   padding-bottom: 10px;
@@ -93,4 +105,49 @@ td a:hover {
 
 .create {
   display: block;
+}
+
+/*errors*/
+/*--------------------------------*/
+div.field_with_errors {
+  background-color: red;
+  padding: 2px;
+  display: table;
+}
+
+.error-box{
+  background-color: #eee;
+  width: 450px;
+  border: 2px solid #d52f25;
+  margin-bottom: 20px;
+}
+
+.error-title {
+  background-color: #871900;
+  color: white;
+  font-size: 12px;
+  line-height: 32px;
+  height: 32px;
+  padding-left: 15px;
+}
+
+.error-message {
+  padding: 28px 40px;
+  font-size: 12px;
+}
+
+/*showクラス*/
+/*---------------------------------*/
+.show-text {
+  margin: 33px;
+}
+
+.show-text span {
+  font-weight: bold;
+}
+
+/*editクラス*/
+/*--------------------------------------*/
+.update {
+  margin-bottom: 10px;
 }
