@@ -1,8 +1,9 @@
+<!--フラッシュメッセージ-->
 <% if flash[:notice] %>
   <div class="alert">
     <%= notice %>
   </div>
-<% end %>
+<% end %><!--フラッシュメッセージ-->
 
 <!--一覧画面-->
 <h2>Books</h2>
@@ -22,7 +23,7 @@
       <td><%= link_to "Destroy",book_path(book.id),method: :delete,"data-confirm"=>"Are you sure?" %></td>
     </tr>
     <% end %>
-</table>
+</table><!--一覧
 
 <!--新規投稿-->
 <h2>New book</h2>

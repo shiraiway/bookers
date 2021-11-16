@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all.order(created_at: :desc)
+    @books = Book.all
 
     @book = Book.new
   end
@@ -22,7 +22,7 @@ class BooksController < ApplicationController
   def edit
     @book = Book.find(params[:id])
   end
-  
+
   def update
     @book = Book.find(params[:id])
     if @book.update(book_params)
@@ -31,7 +31,7 @@ class BooksController < ApplicationController
       render action: :edit
     end
   end
-  
+
   def destroy
     book = Book.find(params[:id])
     book.destroy
